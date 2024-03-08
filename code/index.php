@@ -107,3 +107,52 @@ while($sum2 <= 10) {
     $j +=1;
 }
 echo"Нужно сложить первые {$j} элементов\n";
+
+function printStringReturnNumber($string)
+{
+echo $string;
+return 14;
+}
+
+$my_num = printStringReturnNumber("pepega");
+echo"\n$my_num";
+
+function increaseEnthusiasm($string)
+{
+    $string .= "!";
+    return $string;
+}
+echo "\n", increaseEnthusiasm("pepegato");
+
+function repeatThreeTimes($string){
+    return $string . $string. $string;
+}
+echo "\n", repeatThreeTimes("no");
+echo "\n", increaseEnthusiasm(repeatThreeTimes("nono"));
+
+function cut($string, $num=10){
+    return substr($string, 0, $num);
+}
+
+function printArr($arr, $count=0){
+    echo"\n {$count}: {$arr[$count]}";
+    if($count+1 != sizeof($arr)){
+        printArr($arr, $count+1);}
+}
+printArr($arr7);
+
+function sumOfDigits($num) {
+    $sum = 0;
+    while($num!=0) {
+        $sum += $num % 10;
+        $num = (int)($num / 10);
+    }
+    //echo $sum, "\n";
+    if($sum>9){
+        sumOfDigits($sum);
+    }
+    else{
+        return;
+    }
+}
+
