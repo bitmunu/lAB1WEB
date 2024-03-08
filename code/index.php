@@ -32,3 +32,78 @@ $answer-=2;
 $answer/=2;
 $answer-=$my_num;
 echo $answer, "\n";
+
+$a=10;
+$b=3;
+echo $a % $b, "\n";
+
+if($a % $b == 0) {
+      echo 'Делится: ', $a / $b;
+    }
+
+else{
+    echo 'Делится с остатком: ', $a % $b;
+}
+
+$st = pow(2, 10);
+$st2 = sqrt(245);
+$arr = [4, 2, 5, 19, 13, 0, 10];
+$sum = 0;
+
+foreach($arr as $key => $value) {
+    $sum += $value**2;
+}
+echo "\n", sqrt($sum);
+echo "\n", $sum;
+
+$d = sqrt(379);
+echo"\n{$d}\n";
+echo round($d), " ", round($d, 1), " ", round($d, 2), "\n";
+
+$d = sqrt(587);
+$arr2 = Array('floor' => floor($d), 'ceil' => ceil($d));
+
+$arr3 = [ 4, -2, 5, 19, -130, 0, 10];
+$min = min($arr3);
+$max = max($arr3);
+
+echo "Случайное число: ", rand(1, 100), "\n";
+$arr4 = [];
+
+for($i=0; $i <= 9; $i++) {
+    $arr4[] = rand(1, 100);
+}
+
+$a = 15;
+$b = -1872;
+echo "Тест скрипта первый: ", abs($a-$b), "\n";
+$a = 15989;
+$b = 1872;
+echo "Тест скрипта второй: ", abs($b-$a), "\n";
+
+$arr5 = [1, 2, -1, -2, 3, -3];
+$arr6 = [];
+
+for($i=0; $i <= 5; $i++) {
+    $arr6[] = abs($arr5[$i]);
+}
+
+$n = 42;
+$arr7 = [];
+echo "Делители n: ";
+for($i=1; $i <= $n/2 +1; $i++) {
+    if ($n%$i == 0) {
+        $arr7[] = $i;
+        echo "{$i} ";
+    }
+}
+echo "\n";
+
+$arr8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$sum2 = 0;
+$j = 0;
+while($sum2 <= 10) {
+    $sum2+=$arr8[$j];
+    $j +=1;
+}
+echo"Нужно сложить первые {$j} элементов\n";
