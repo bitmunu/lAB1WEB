@@ -156,3 +156,73 @@ function sumOfDigits($num) {
     }
 }
 
+$arr9 = [];
+function Repeat($arr, $string, $ogstring, $counter, $times){
+    $arr[] = $string.$ogstring;
+    echo"\n", $string.$ogstring;
+    if($counter+1 != $times) {
+        Repeat($arr,$string.$ogstring, $ogstring, $counter+1, $times);
+    }
+    return;
+}
+
+Repeat($arr9, "", "x", 0, 5 );
+
+function arrayFill($string, $numver){
+    $arr10 = [];
+    for($i=0; $i<=$numver; $i++){
+        $arr10[] = $string;
+    }
+    return $arr10;
+}
+
+function matrixSum(array $arr){
+    $sum = 0;
+    foreach ($arr as $subarr){
+        foreach($subarr as $elem){
+            $sum+=$elem;
+        }
+    }
+    return $sum;
+}
+echo "\n", matrixSum([[1, 2, 3], [4, 5], [6]]);
+
+function createArr($size, $chunk_size){
+    if($size % $chunk_size !=0){
+        return;
+    }
+    $arr = [];
+    $counter = 1;
+
+    for($i = 0; $i <= (int)($size / $chunk_size)-1; $i++){
+        $subarr = [];
+
+        for($j=0; $j <= $chunk_size-1; $j++){
+            $subarr[] = $counter;
+            $counter++;
+        }
+        $arr[] = $subarr;
+    }
+
+    foreach ($arr as $subar){
+        foreach ($subar as $elem){
+            echo"\n", " {$elem}";
+        }
+    }
+}
+
+createArr(9, 3);
+
+$mas = [2, 5, 3, 9];
+$result = $mas[0] * $mas[1] + $mas[2] * $mas[3];
+echo "\n", $result, "\n";
+
+$user = Array('name'=> "5", 'surname'=>"0", 'patronymic' => "cent");
+echo"{$user['name']} {$user['surname']} {$user['patronymic']}\n";
+
+$date = Array('year'=> "2024", 'month'=>"03", 'day' => "08");
+echo"{$date['year']} {$date['month']} {$date['day']}\n";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo"Количетсво элементов: ", sizeof($arr), "\n";
+echo"Последние элементы: ", $arr[4], ", ", $arr[3], "\n";
