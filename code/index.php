@@ -226,3 +226,52 @@ echo"{$date['year']} {$date['month']} {$date['day']}\n";
 $arr = ['a', 'b', 'c', 'd', 'e'];
 echo"Количетсво элементов: ", sizeof($arr), "\n";
 echo"Последние элементы: ", $arr[4], ", ", $arr[3], "\n";
+
+
+function forReal($a, $b){
+    if ($a + $b > 10){
+        return True;
+    }
+    else{
+        return False;
+    }
+}
+
+function forRealYes($a, $b){
+    if ($a == $b > 10){
+        return True;
+    }
+    else{
+        return False;
+    }
+}
+
+$test = 0;
+if ($test == 0) echo "\nВерно\n";
+
+$age = 76;
+
+if($age <10 || $age >99){
+    echo"yes1\n";
+}
+else if($age >= 10 and $age <=99){
+    $k = $age;
+    $new_sum=0;
+    while($k!=0){
+        $new_sum +=$k%10;
+        $k = (int)($k/10);
+    }
+    echo"sum is {$new_sum}\n";
+    if($new_sum <=9) echo"сумма цифр однозначна\n";
+    else{
+        echo"сумма цифр двузначна\n";
+    }
+}
+
+$arro = [1, 2, 3, 4];
+if(sizeof($arro)==3){
+    echo array_sum($arro), "\n";
+}
+
+Repeat($arr9, "", "x", 0, 20);
+
