@@ -1,11 +1,15 @@
 <?php
 
+
+//1
 $very_bad_unclear_name = "nonono";
 $order = & $very_bad_unclear_name;
 
 $order .= "yes";
 echo"\nMy order is: $very_bad_unclear_name\n";
 
+
+//2
 $var = 5;
 $var2 = 7;
 $flot = 1.2e4;
@@ -17,13 +21,19 @@ $this_month = 1089.98;
 echo "\n";
 echo "last - this: ", $last_month - $this_month, "\n";
 
+
+//11
 $num_languages = 4;
 $months = 11;
 $days = $months * 16;
 $days_per_language = $days / 4;
 echo "days per language: {$days_per_language}\n";
 
+//12
 echo 8**2, "\n";
+
+
+//13
 $my_num = 19;
 $answer = $my_num;
 $answer +=2;
@@ -33,6 +43,8 @@ $answer/=2;
 $answer-=$my_num;
 echo $answer, "\n";
 
+
+//14
 $a=10;
 $b=3;
 echo $a % $b, "\n";
@@ -108,6 +120,8 @@ while($sum2 <= 10) {
 }
 echo"Нужно сложить первые {$j} элементов\n";
 
+
+//15
 function printStringReturnNumber($string)
 {
 echo $string;
@@ -117,6 +131,8 @@ return 14;
 $my_num = printStringReturnNumber("pepega");
 echo"\n$my_num";
 
+
+//16
 function increaseEnthusiasm($string)
 {
     $string .= "!";
@@ -156,6 +172,8 @@ function sumOfDigits($num) {
     }
 }
 
+
+//17
 $arr9 = [];
 function Repeat($arr, $string, $ogstring, $counter, $times){
     $arr[] = $string.$ogstring;
@@ -228,6 +246,7 @@ echo"Количетсво элементов: ", sizeof($arr), "\n";
 echo"Последние элементы: ", $arr[4], ", ", $arr[3], "\n";
 
 
+//18
 function forReal($a, $b){
     if ($a + $b > 10){
         return True;
@@ -273,5 +292,34 @@ if(sizeof($arro)==3){
     echo array_sum($arro), "\n";
 }
 
+
+//19
 Repeat($arr9, "", "x", 0, 20);
+
+
+//20
+$aa = [1, 2, 3, 4, 5, 6];
+$res = array_sum($aa) / count($aa);
+echo"\nСреднее арифметическое: $res \n";
+
+$sum_a = 100*(1 + 100)/2;
+echo"Сумма чисел от 1 до 100 равна: $sum_a\n";
+
+$aaa = [14, 161, 144, 224, 225];
+$aaaa = array_map('sqrt', $aaa);
+foreach($aaaa as $elem){
+    echo"$elem ";
+}
+
+$aaaaa = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l',
+    'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+$aaaaaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+    13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+$res_arr = array_combine($aaaaa, $aaaaaa);
+
+$s = '1234567890';
+
+$sum_s = (int)substr($s,0,2) + (int)substr($s,2,2)
+    + (int)substr($s,4,2) + (int)substr($s,6,2) + (int)substr($s,8,2);
+echo"\ncумма пар: $sum_s\n";
 
